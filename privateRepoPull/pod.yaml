@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pp
+  labels:
+    name: p
+spec:
+  containers:
+  - name: cont
+    image: vikas1818/privaterepo:SpringBoot
+  imagePullSecrets:
+  - name: mysecret

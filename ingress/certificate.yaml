@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: certificate
+spec:
+  secretName: ca-tls-secret
+  isCA: true
+  issuerRef:
+    kind: Issuer
+    name: letsencrypt
+  commonName: "sample-web.k8sutils.com"
+  dnsNames:
+  - "sample-web.k8sutils.com"
