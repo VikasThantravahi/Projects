@@ -1,0 +1,1 @@
+kubectl port-forward --namespace default service/loki-grafana 3000:80

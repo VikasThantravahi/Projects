@@ -1,0 +1,8 @@
+THIS CURL COMMAND IS FOR LINUX CLI
+curl -G -s  "http://192.168.59.100:31260/loki/api/v1/query_range" --data-urlencode 'query={namespace="etcd",pod="etcd-minikube",container="etcd"}' | jq
+
+DOWN COMMAND IS FOR POSTMAN (same but you remove "| jq" while using it in postman)
+
+curl -G -s  "http://192.168.59.100:31260/loki/api/v1/query_range" --data-urlencode 'query={namespace="etcd",pod="etcd-minikube",container="etcd"}'
+
+
